@@ -43,8 +43,8 @@ public class Mine extends ACell implements IUtils {
       return temp;
     }
     else {
-      return new OverlayImage(new StarImage(CELL_SIDE_LENGTH / 3, 8, 3, OutlineMode.SOLID,
-              Color.red), new FrameImage(new RegularPolyImage(CELL_SIDE_LENGTH, 4, "solid",
+      return new OverlayImage(new CircleImage(CELL_SIDE_LENGTH, OutlineMode.SOLID, Color.red)
+              , new FrameImage(new RegularPolyImage(CELL_SIDE_LENGTH, 4, "solid",
               Color.gray)));
     }
   }

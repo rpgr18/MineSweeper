@@ -171,14 +171,14 @@ class MinesweeperTest implements IUtils {
             RegularPolyImage(CELL_SIDE_LENGTH, 4, "solid",  Color.gray))), new
             OverlayImage(new TextImage("2", FONT_SIZE, Color.green), new FrameImage(new
             RegularPolyImage(CELL_SIDE_LENGTH, 4, "solid",  Color.gray)))),
-            new OverlayImage(new StarImage(CELL_SIDE_LENGTH / 3, 8, 3, OutlineMode.SOLID, Color.red),
+            new OverlayImage(new CircleImage(CELL_SIDE_LENGTH, OutlineMode.SOLID, Color.red),
                     new FrameImage(new RegularPolyImage(CELL_SIDE_LENGTH, 4, "solid",  Color.gray)))),
             new OverlayImage(new TextImage("1", FONT_SIZE, Color.blue), new FrameImage(new
                     RegularPolyImage(CELL_SIDE_LENGTH, 4, "solid",  Color.gray))));
     WorldImage w2Row2 = new BesideImage(new BesideImage(new BesideImage(new OverlayImage(new
             TextImage("1", FONT_SIZE, Color.blue), new FrameImage(new
-            RegularPolyImage(CELL_SIDE_LENGTH, 4, "solid",  Color.gray))), new OverlayImage(new
-            StarImage(CELL_SIDE_LENGTH / 3, 8, 3, OutlineMode.SOLID, Color.red),
+            RegularPolyImage(CELL_SIDE_LENGTH, 4, "solid",  Color.gray))), new OverlayImage(
+                    new CircleImage(CELL_SIDE_LENGTH, OutlineMode.SOLID, Color.red),
             new FrameImage(new RegularPolyImage(CELL_SIDE_LENGTH, 4, "solid",  Color.gray)))),
             new OverlayImage(new TextImage("3", FONT_SIZE, Color.magenta), new FrameImage(new
                     RegularPolyImage(CELL_SIDE_LENGTH, 4, "solid",  Color.gray)))),
@@ -327,8 +327,8 @@ class MinesweeperTest implements IUtils {
             && t.checkExpect(this.flaggedEmpty.drawCell(), new OverlayImage(new
             EquilateralTriangleImage(CELL_SIDE_LENGTH / 2, "solid", Color.orange),
             new FrameImage(new RegularPolyImage(CELL_SIDE_LENGTH, 4, "solid", Color.cyan))))
-            && t.checkExpect(this.revealedMine.drawCell(), new OverlayImage(new StarImage(
-            CELL_SIDE_LENGTH / 3, 8, 3, OutlineMode.SOLID, Color.red), new FrameImage(new
+            && t.checkExpect(this.revealedMine.drawCell(), new OverlayImage(
+                    new CircleImage(CELL_SIDE_LENGTH, OutlineMode.SOLID, Color.red), new FrameImage(new
             RegularPolyImage(CELL_SIDE_LENGTH, 4, "solid",  Color.gray))))
             && t.checkExpect(this.fourMN.drawCell(), new OverlayImage(new TextImage("4", FONT_SIZE,
             Color.orange), new FrameImage(new RegularPolyImage(CELL_SIDE_LENGTH, 4, "solid",
